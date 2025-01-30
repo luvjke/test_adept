@@ -1,11 +1,10 @@
 // COLORS
 
-$basic-white: #ffffff;
+$main-white: #ffffff;
 $disabled-gray: #808080;
 $selected-gray: #bfbfbf;
 $input-gray: #d9d9d9;
-$title-black: #000000;
-$marine: #1890ff;
+$main-black: #000000;
 
 // FOLDER COLORS
 
@@ -26,7 +25,8 @@ $font-weight-bold: 700;
 
 // SHADOWS
 
-$basic-box-shadow: 0 0 0 1px transparent,
+$basic-box-shadow:
+  0 0 0 1px transparent,
   0 0 0 2px #223c50;
 
 //  BORDER
