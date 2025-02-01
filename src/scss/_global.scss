@@ -1,3 +1,5 @@
+@import '../scss/mixins/text.scss';
+
 body {
   background-color: #ffffff;
   margin: 0 auto;
@@ -5,13 +7,14 @@ body {
 }
 
 * {
+  @include textRegular-16();
   box-sizing: border-box;
+  color: black;
   list-style: none;
   margin: 0;
   outline: none;
   padding: 0;
   text-decoration: none;
-  color: black;
 }
 
 img {

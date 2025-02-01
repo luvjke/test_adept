@@ -1,4 +1,5 @@
 @import '../../../scss/variables.scss';
+
 .tablerow {
   display: grid;
   grid-template-columns: 100px 4fr 5fr;
@@ -11,12 +12,14 @@
     padding: 10px;
     text-align: center;
   }
+
   td {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
   }
 }
+
 .selected {
   background-color: $sub-gray;
 }

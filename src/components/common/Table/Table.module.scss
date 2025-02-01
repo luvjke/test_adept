@@ -1,6 +1,8 @@
 @import '../../../scss/variables.scss';
+
 .container {
-  height: 450px;
+  border: $main-border;
+  height: 615px;
   overflow: auto;
 }
 

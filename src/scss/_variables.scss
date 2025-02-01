@@ -1,14 +1,14 @@
 // COLORS
 
 $main-white: #ffffff;
-$sub-gray: #808080;
+$sub-gray: #dddcdc;
 $input-gray: #d9d9d9;
 $main-black: #000000;
 
 // FOLDER COLORS
 
-$danger: #ff4d4f;
-$sucsess: #52c41a;
+$danger: #6d3535a8;
+$sucsess: #93d373;
 $aqua: #40a9ff;
 $sunrise: #fadb14;
 
@@ -24,8 +24,9 @@ $font-weight-bold: 700;
 
 // SHADOWS
 
-$basic-box-shadow:
-  0 0 0 1px transparent,
+$basic-box-shadow: 0 0 0 1px transparent,
   0 0 0 2px #223c50;
 
 //  BORDER
+
+$main-border: 5px inset #96969673;

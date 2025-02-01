@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import { useAppDispatch } from 'src//redux/hooks';
+import { selectAllCompany } from 'src/redux/Slice/companySlice';
+import { MyCheckbox } from 'src/components/ui/MyCheckbox/MyCheckbox';
 
 import style from './TableHeader.module.scss';
-import { selectAllCompany } from '../../../redux/Slice/companySlice';
-import { MyCheckbox } from '../../ui/MyCheckbox/MyCheckbox';
-import { useAppDispatch } from '../../../redux/hooks';
 
 export const TableHeader = () => {
   const [selectAll, setSelectAll] = useState(false);
@@ -20,7 +20,6 @@ export const TableHeader = () => {
           <MyCheckbox
             name={'Выделить все '}
             text={'Выделить все '}
-            colorCheckbox={''}
             handleSelectAll={handleSelectAll}
           />
         </th>

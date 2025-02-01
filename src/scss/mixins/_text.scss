@@ -1,6 +1,6 @@
 @import '../variables.scss';
 @mixin basic-text {
-  color: $basic-white;
+  color: $main-black;
   font-family: $font-family-roboto;
   font-style: normal;
   line-height: normal;
@@ -16,6 +16,13 @@
   font-size: 16px;
   font-weight: $font-weight-regular;
 }
+
+@mixin textRegular-20 {
+  @include basic-text();
+  font-size: 20px;
+  font-weight: $font-weight-regular;
+}
+
 
 @mixin textBold-16 {
   @include textRegular-16();

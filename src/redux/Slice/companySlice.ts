@@ -13,7 +13,7 @@ const companySlice = createSlice({
   reducers: {
     addCompany: (state, action) => {
       const newCompany = { ...action.payload, isSelected: false };
-      state.companies.unshift(newCompany);
+      state.companies = [newCompany, ...state.companies];
     },
     deleteCompany: (state) => {
       state.companies = state.companies.filter((company) => !company.isSelected);
@@ -32,6 +32,7 @@ const companySlice = createSlice({
       if (index !== -1) {
         state.companies[index] = action.payload;
       }
+      console.log(123);
     },
   },
 });

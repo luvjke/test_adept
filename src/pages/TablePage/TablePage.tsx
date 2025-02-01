@@ -7,7 +7,6 @@ export const TablePage = () => {
   return (
     <main>
       <Table />
-
       <FormAddCompany />
     </main>
   );

@@ -1,20 +1,21 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
+import { useAppDispatch } from 'src/redux/hooks';
+import { editCompany } from 'src/redux/Slice/companySlice';
+import { Input } from 'src/components/ui/Input';
 
 import style from './TableCell.module.scss';
 import { TableCellProps } from './TableCell.props';
-import { useAppDispatch } from '../../../redux/hooks';
-import { editCompany } from '../../../redux/Slice/companySlice';
 
 export const TableCell = ({ id, value }: TableCellProps) => {
   const dispatch = useAppDispatch();
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch(editCompany({ id, name: e.target.value }));
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    dispatch(editCompany({ id, value: e.target.value }));
   };
 
   return (
     <td className={style.tablecell}>
-      <input type="text" value={value} name={String(value)} onChange={handleChange} />
+      <Input type="text" value={value} onChange={handleChange} version={'custom'} />
     </td>
   );
 };

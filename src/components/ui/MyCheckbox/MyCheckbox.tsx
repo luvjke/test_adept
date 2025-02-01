@@ -7,13 +7,12 @@ import { ReactComponent as CheckMark } from '../../../assets/CheckMark.svg';
 export const MyCheckbox = ({
   name,
   text,
-  colorCheckbox,
   isSelected,
   handleSelect,
   handleSelectAll,
 }: MyCheckboxProps) => {
   return (
-    <li className={style.item} style={{ color: colorCheckbox }}>
+    <li className={style.item}>
       <label className={style.label}>
         {text && <span className={style.text}>{text}</span>}
         <input
