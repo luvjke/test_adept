@@ -1,6 +1,8 @@
 export interface MyCheckboxProps {
-  inputId: string;
   name: string;
   text?: string;
   colorCheckbox: string;
+  isSelected?: boolean;
+  handleSelect?: () => void;
+  handleSelectAll?: () => void;
 }

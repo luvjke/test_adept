@@ -2,8 +2,9 @@
   display: block;
   padding: 7px 10px 7px;
   width: 100%;
-}
-.box_tr {
-  display: flex;
-  justify-content: space-between;
+
+  .box_tr {
+    display: flex;
+    justify-content: space-around;
+  }
 }

@@ -1,5 +1,13 @@
 @import '../../../scss/variables.scss';
-.table {
+.container {
+  height: 450px;
+  overflow: auto;
+}
+
+.table_box {
   width: 100%;
-  background-color: $input-gray;
+
+  .observer {
+    height: 30px;
+  }
 }

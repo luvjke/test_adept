@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import style from './TableHeader.module.scss';
-import { MyCheckbox } from '../MyCheckbox/MyCheckbox';
+import { selectAllCompany } from '../../../redux/Slice/companySlice';
+import { MyCheckbox } from '../../ui/MyCheckbox/MyCheckbox';
+import { useAppDispatch } from '../../../redux/hooks';
 
 export const TableHeader = () => {
+  const [selectAll, setSelectAll] = useState(false);
+  const dispatch = useAppDispatch();
+  const handleSelectAll = () => {
+    setSelectAll(!selectAll);
+    dispatch(selectAllCompany(!selectAll));
+  };
   return (
     <thead className={style.container}>
       <tr className={style.box_tr}>
         <th>Компании</th>
         <th>
-          <MyCheckbox inputId={'0'} name={'ваыва'} text={'Выделить все '} colorCheckbox={''} />
+          <MyCheckbox
+            name={'Выделить все '}
+            text={'Выделить все '}
+            colorCheckbox={''}
+            handleSelectAll={handleSelectAll}
+          />
         </th>
       </tr>
     </thead>

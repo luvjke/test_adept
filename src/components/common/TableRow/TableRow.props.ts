@@ -1,5 +1,6 @@
 export interface TableRowProps {
-  id: string;
+  id: number;
   name: string;
   address: string;
+  isSelected: boolean;
 }

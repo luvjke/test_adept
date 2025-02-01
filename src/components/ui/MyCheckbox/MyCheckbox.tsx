@@ -1,25 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { MyCheckboxProps } from './MyCheckbox.props';
 import style from './MyCheckbox.module.scss';
 import { ReactComponent as CheckMark } from '../../../assets/CheckMark.svg';
 
-export const MyCheckbox = ({ inputId, name, text, colorCheckbox }: MyCheckboxProps) => {
-  const [isChecked, setIsChecked] = useState(false);
-  const handleChecked = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setIsChecked(event.target.checked);
-  };
+export const MyCheckbox = ({
+  name,
+  text,
+  colorCheckbox,
+  isSelected,
+  handleSelect,
+  handleSelectAll,
+}: MyCheckboxProps) => {
   return (
     <li className={style.item} style={{ color: colorCheckbox }}>
-      <label className={style.label} htmlFor={inputId}>
-        {/* <span className={style.circle}></span> */}
+      <label className={style.label}>
         {text && <span className={style.text}>{text}</span>}
         <input
           className={style.realInput}
-          onChange={handleChecked}
+          onChange={handleSelect || handleSelectAll}
           type="checkbox"
-          checked={isChecked}
-          id={inputId}
+          checked={isSelected}
           name={name}
         />
         <span className={style.customCheckbox}>

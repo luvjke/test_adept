@@ -1,4 +1,22 @@
+@import '../../../scss/variables.scss';
 .tablerow {
   display: grid;
   grid-template-columns: 100px 4fr 5fr;
+
+  .tablecell {
+    align-items: center;
+    border: 1px solid #d9d9d9;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+  }
+  td {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.selected {
+  background-color: $sub-gray;
 }
