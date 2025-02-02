@@ -9,7 +9,7 @@ export const useObserver = (companies: CompanyInterface[]) => {
   useEffect(() => {
     const loadMoreCompanies = (entries: IntersectionObserverEntry[]) => {
       if (entries[0].isIntersecting) {
-        setVisibleCompanies((prev) => prev + 10);
+        setVisibleCompanies((prev) => prev + 30);
       }
     };
 
