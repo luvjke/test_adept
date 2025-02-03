@@ -16,6 +16,8 @@ export const FormAddCompany = () => {
     if (companyName && companyAddress) {
       dispatch(addCompany({ name: companyName, address: companyAddress }));
     }
+    setCompanyName('');
+    setCompanyAddress('');
   };
   return (
     <form className={styles.form_box} onSubmit={handleSubmit}>
